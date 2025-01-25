@@ -4,22 +4,22 @@ export const navbarItems = [
   {
     id: "01",
     name: "About",
-    link: "#about",
+    link: "/#about",
   },
   {
     id: "02",
     name: "Experience",
-    link: "#experience",
+    link: "/#experience",
   },
   {
     id: "03",
     name: "Work",
-    link: "#work",
+    link: "/#work",
   },
   {
     id: "04",
     name: "Contact",
-    link: "#contact",
+    link: "/#contact",
   },
 ];
 

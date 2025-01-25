@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .no-scrollbar-outline::-webkit-scrollbar-thumb {
+    outline: none;
+  }
+
+  .no-scrollbar-outline::-webkit-scrollbar-track {
+    outline: none;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

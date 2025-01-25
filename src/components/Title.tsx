@@ -11,9 +11,11 @@ const Title: React.FC<TitleProps> = ({
   extraclass = "justify-start",
 }) => {
   return (
-    <div className={`flex gap-2 poppins-bold   ${extraclass} mb-4 items-end`}>
-      <span className="text-[22px] text-teal-300">{index}.</span>
-      <p className="text-[25px] text-gray-300 font-semibold capitalize">
+    <div
+      className={`flex gap-2 poppins-bold w-full   ${extraclass} mb-4 items-end`}
+    >
+      <span className=" md:text-[22px] text-teal-300">{index}.</span>
+      <p className="md:text-[25px] text-gray-300 font-semibold capitalize">
         {title}
       </p>
       <div className=" border w-1/4 items-center border-gray-500 mb-4"></div>

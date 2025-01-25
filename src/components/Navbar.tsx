@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { navbarItems } from "../constants/constants";
 import { TbMenuDeep } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navbarRef = useRef(null);
@@ -46,12 +47,14 @@ const Navbar = () => {
       className="flex items-center justify-between py-5 bg-[#0A192F] text-white"
     >
       {/* Logo */}
-      <div
-        ref={logoRef}
-        className="logo w-12 h-12 cursor-pointer transform hover:scale-110 transition-all"
-      >
-        <img src="/logo.avif" alt="Logo" className="w-full h-full" />
-      </div>
+      <Link to={"/"}>
+        <div
+          ref={logoRef}
+          className="logo w-12 h-12 cursor-pointer transform hover:scale-110 transition-all"
+        >
+          <img src="/logo.avif" alt="Logo" className="w-full h-full" />
+        </div>
+      </Link>
 
       {/* Menu Items */}
       <div className="hidden md:flex items-center gap-6">
