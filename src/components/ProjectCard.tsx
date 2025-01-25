@@ -20,16 +20,16 @@ export const ProjectCard = ({
 
   return (
     <div
-      className={`project-card   flex flex-col md:flex-row ${
+      className={`project-card poppins-medium  flex flex-col md:flex-row ${
         reverse ? "md:flex-row-reverse" : ""
-      } space-y-6 md:space-y-0 md:spacex-6`}
+      } space-y-6 md:space-y-0 md:space-x-6`}
     >
       {/* Image */}
       <div className="w-full h-96  md:w-[60%] overflow-hidden rounded-lg shadow-lg">
         <img
           src={image}
           alt={title}
-          className="w-full h-ull object-covers transform hover:scale-105 transition-transform duration-500 blur-[2px] hover:blur-0"
+          className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500 blur-[2px] hover:blur-0"
         />
       </div>
 
@@ -37,24 +37,29 @@ export const ProjectCard = ({
       <div
         className={`w-full flex flex-col ${
           reverse ? "items-start" : "items-end"
-        }  md:w-[40%] gap-3`}
+        }  md:w-[40%] gap-4`}
       >
-        <p className="text-teal-300 font-semibold tracking-wide text-sm">
-          Featured Project
-        </p>
-        <h4 className="text-2xl font-semibold ">{title}</h4>
+        <div
+          className={`flex flex-col gap-2 ${
+            reverse ? "text-left" : "text-right"
+          } mb-5 poppins-medium`}
+        >
+          <p className="text-teal-300 font-semibold tracking-wide text-sm">
+            Featured Project
+          </p>
+          <h4 className="text-2xl font-semibold ">{title}</h4>
+        </div>
         <div className="relative">
           <p
             style={{ boxShadow: "0 10px  30px -15px #020c1bb3" }}
-            className={`text-sm rounded-md bg-[#112240] p-4 py-10  w-[calc(40vw+10px)]  text-[#a8b2d1] tracking-tighter mb-4 ${
+            className={`text-sm rounded-md bg-[#112240] p-6 py10  w-[calc(40vw+10px)]  text-[#a8b2d1] tracking-wide mb-4 ${
               reverse ? "texl-left" : "text-right"
             }`}
           >
             {description}
           </p>
-          <p></p>
         </div>
-        <div className="flex items-center capitalize gap-4 text-[#7e8394] ">
+        <div className="flex items-center  capitalize gap-4 text-[#7e8394] ">
           {tech.map((item: any, i: number) => (
             <span key={i}>{item}</span>
           ))}
@@ -62,10 +67,13 @@ export const ProjectCard = ({
 
         <div className="flex items-center space-x-4 text-2xl">
           {/* GitHub Link */}
-          <a href={links.github}>
-            <FiGithub />
-          </a>
-          <a href={links.external}>
+
+          {links.github !== null && (
+            <a href={links.github} target="_blank">
+              <FiGithub />
+            </a>
+          )}
+          <a href={links.external} target="_blank">
             <FiExternalLink />
           </a>
         </div>

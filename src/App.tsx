@@ -1,18 +1,25 @@
+import { Route, Routes } from "react-router-dom";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
+import NoteWorthyProjects from "./pages/NoteWorthyProjects";
 import Projects from "./pages/Projects";
 import Worked from "./pages/Worked";
+import Archieve from "./components/Archieve";
 
 const App = () => {
   return (
-    <div className="bg-[#0a182d] antialiased fira-code-light container px-10 min-h-screen w-full text-[#64ffda]">
-      <div className="w-[90%] mx-auto ">
+    <div className="bg-[#0a182d] antialiased fira-code-light container md:px-10 min-h-screen w-full text-[#64ffda]">
+      <div className="md:w-[85%] mx-auto ">
         <Navbar />
         <Hero />
         <About />
         <Worked />
         <Projects />
+        <Routes>
+          <Route path="/archieve" element={<Archieve />} />
+        </Routes>
+        <NoteWorthyProjects />
       </div>
     </div>
   );

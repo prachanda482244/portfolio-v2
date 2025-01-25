@@ -6,10 +6,10 @@ import { projects } from "../constants/constants";
 
 const Projects = () => {
   return (
-    <div className="bg-[#0A192F] text-[#CCD6F6] ">
+    <section id="work" className=" pt-4 text-[#CCD6F6] ">
       <div className="container mx-auto px-4">
         <Title index="03" title="Some Things I’ve Built" />
-        <div className="space-y-12 pt-4">
+        <div className="flex flex-col gap-32 pt-4">
           {projects.map((project) => (
             <ProjectCard
               title={project.title}
@@ -22,7 +22,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

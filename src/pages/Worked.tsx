@@ -18,13 +18,16 @@ const Worked = () => {
   }, [selectedIndex]);
 
   return (
-    <div className="min-h-screen  open-sans-light w-[70%] bg-[#0a192f]  mx-auto text-[#ccd6f6] font-mono">
+    <section
+      id="experience"
+      className="min-h-screen pt-10 open-sans-light w-[70%] bg-[#0a192f]  mx-auto text-[#ccd6f6] font-mono"
+    >
       <Title index="02" title="Where I've Worked" />
 
-      <div className="flex pt-5 h-[calc(100vh-120px)]">
+      <div className="flex flex-col md:flex-row pt-5 h-[calc(100vh-120px)]">
         {/* Left Side - Navigation */}
-        <div className="w-1/3 s">
-          <ul className="">
+        <div className="md:w-1/3 ">
+          <ul className="flex md:flex-col">
             {experiences.map((exp, index) => (
               <li
                 key={index}
@@ -42,7 +45,7 @@ const Worked = () => {
         </div>
 
         {/* Right Side - Content */}
-        <div className="w-2/3 pl-4 " ref={contentRef}>
+        <div className="md:w-2/3 pl-4 " ref={contentRef}>
           <h3 className=" text-lg text-gray-300 font-bold flex gap-[6px]">
             <span className="tracking-wide">
               {experiences[selectedIndex].role}
@@ -71,7 +74,7 @@ const Worked = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

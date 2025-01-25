@@ -34,23 +34,23 @@ const Hero = () => {
         ref={addToRefs}
         className="text-[#64ffda] mb-4 text-lg sm:text-xl md:text-2xl"
       >
-        Hello! I am
+        Hi! My name is
       </p>
       <h1
         ref={addToRefs}
-        className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#ccd6f6] mb-2"
+        className="text-3xl md:text-7xl font-extrabold text-[#ccd6f6] mb-2"
       >
         Prachanda Rana.
       </h1>
       <h2
         ref={addToRefs}
-        className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#8892b0] mb-6"
+        className="text-2xl sm:text-4xl md:text-5xl font-semibold text-[#8892b0] mb-6"
       >
         I build things for the Web.
       </h2>
       <p
         ref={addToRefs}
-        className="text-[#8892b0] text-base sm:text-lg md:text-xl max-w-xl mb-10 leading-relaxed"
+        className="text-[#8892b0] poppins-regular text-base sm:text-lg md:text-xl max-w-xl mb-10 md:leading-relaxed"
       >
         I’m a software engineer at{" "}
         <a

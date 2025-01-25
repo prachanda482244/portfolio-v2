@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { navbarItems } from "../constants/constants";
+import { TbMenuDeep } from "react-icons/tb";
 
 const Navbar = () => {
   const navbarRef = useRef(null);
@@ -42,7 +43,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="flex items-center justify-between  py-5 bg-[#0A192F] text-white"
+      className="flex items-center justify-between py-5 bg-[#0A192F] text-white"
     >
       {/* Logo */}
       <div
@@ -64,7 +65,7 @@ const Navbar = () => {
               <span className="text-teal-300">{item.id}.</span>
               <a
                 href={item.link}
-                className="text-gray-400 hover:text-teal-300 transition-all delay-75"
+                className="text-gray-400 cursor-pointer hover:text-teal-300 transition-all delay-75"
               >
                 {item.name}
               </a>
@@ -82,7 +83,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className="md:hidden flex items-center gap-4">
         <button className="text-teal-300 border border-teal-300 px-3 py-2 rounded-md hover:bg-teal-300 hover:text-black">
-          Menu
+          <TbMenuDeep />
         </button>
       </div>
     </nav>

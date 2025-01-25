@@ -75,17 +75,16 @@ const About = () => {
       <div className="flex flex-col md:flex-row justify-between gap-12">
         <div
           ref={textRef}
-          className="text-gray-400 font-sans text-[16px] leading-relaxed max-w-xl space-y-3 "
+          className="text-gray-500 poppins-regular text-sm leading-3 md:leading-relaxed max-w-xl space-y-3 "
         >
           <p className="leading-tight tracking-wide">
-            Hello! My name is{" "}
-            <span className="text-teal-300 font-semibold">Prachanda</span>, and
-            I enjoy creating things that live on the internet. My interest in
-            web development started back in 2012 when I decided to try editing
-            custom Tumblr themes — turns out hacking together a custom reblog
-            button taught me a lot about HTML & CSS!
+            Hello! My name is Prachanda, and I enjoy creating things that live
+            on the internet. My interest in web development started back in 2012
+            when I decided to try editing custom Tumblr themes — turns out
+            hacking together a custom reblog button taught me a lot about HTML &
+            CSS!
           </p>
-          <p className="leading-tight font-sans tracking-wide">
+          <p className="leading-tight  tracking-wide">
             Fast-forward to today, I’ve had the privilege of working at
             <br />
             <a
@@ -127,14 +126,14 @@ const About = () => {
             My main focus these days is building accessible, inclusive products
             and digital experiences for a variety of clients.
           </p>
-          <p className="leading-tight font-sans tracking-wide">
+          <p className="leading-tight  tracking-wide">
             I also recently added a blog that covers everything you need to
             build a web app with the API using{" "}
             <span className="text-teal-300 font-semibold">Node & React</span>.
           </p>
           <div className="flex pt-2  flex-col gap-4">
             <p>Here are a few technologies I’ve been working with recently:</p>
-            <div className="text-sm grid grid-cols-2 w-1/2">
+            <div className="text-sm grid poppins-medium  grid-cols-2 w-full md:w-[80%]">
               {technologies.map((tech: any) => (
                 <p
                   className="flex tracking-widest text-gray-500 items-center gap-1"

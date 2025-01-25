@@ -1,29 +1,36 @@
+import { CardProps } from "../types/types";
+
 export const navbarItems = [
   {
     id: "01",
     name: "About",
+    link: "#about",
   },
   {
     id: "02",
     name: "Experience",
+    link: "#experience",
   },
   {
     id: "03",
     name: "Work",
+    link: "#work",
   },
   {
     id: "04",
     name: "Contact",
+    link: "#contact",
   },
 ];
 
 export const technologies = [
-  { id: 1, name: "JavaScript" },
+  { id: 1, name: "JavaScript (ES6+)" },
   { id: 2, name: "TypeScript" },
   { id: 3, name: "React" },
   { id: 4, name: "Shopify" },
   { id: 5, name: "Node.js" },
   { id: 6, name: "MongoDB" },
+  { id: 7, name: "Docker" },
 ];
 
 export const experiences = [
@@ -74,18 +81,31 @@ export const experiences = [
   },
 ];
 
+//
 export const projects = [
+  {
+    title: "Catalog2Cart‑Shoppable PDF",
+    description: `Published on the Shopify App Store, this tool adds clickable hotspots to PDFs, turning them into interactive shopping experiences. It simplifies navigation, boosts engagement, and has been shown to increase sales by 20%.`,
+    image: "/projects/pdf.webp",
+    tech: ["remix", "node", "shopify", "graphQL", "heroku"],
+    links: {
+      github: null,
+      external:
+        "https://apps.shopify.com/pdf-converter?search_id=0ff553ac-5d34-463f-a854-819b32452900&surface_detail=cm&surface_inter_position=1&surface_intra_position=10&surface_type=search",
+    },
+    reverse: false,
+  },
   {
     title: "Library Management System",
     description: `Library Management System streamlines book management with features like "Add to Cart," chat support, order tracking, and data visualization, improving user experience and operational efficiency.`,
     image: "/projects/lms.png",
-    tech: ["react", "node", "mongoDB", "express", "docker", "socket"],
+    tech: ["react", "node", "mongoDB", "express", "socket"],
     links: {
       github:
         "https://github.com/prachanda482244/library-management-system-frontend",
       external: "https://library-management-system-frontent.vercel.app/",
     },
-    reverse: false,
+    reverse: true,
   },
   {
     title: "Brain Wave",
@@ -96,7 +116,7 @@ export const projects = [
       github: "https://github.com/prachanda482244/brain-wave",
       external: "https://brain-wave-ai-web.vercel.app/",
     },
-    reverse: true,
+    reverse: false,
   },
   {
     title: "Movie Flex Hub",
@@ -107,7 +127,7 @@ export const projects = [
       github: "https://github.com/prachanda482244/movie-flex-hub",
       external: "https://movie-flex-hub-itachi.vercel.app/",
     },
-    reverse: false,
+    reverse: true,
   },
   {
     title: "Online Rental Market Place",
@@ -119,17 +139,57 @@ export const projects = [
         "https://github.com/prachanda482244/Online-rental-market-place-BCA-6th-sem",
       external: "https://mern-estate-bca.onrender.com/",
     },
-    reverse: true,
+    reverse: false,
   },
   {
     title: "Nike Store",
     description: `Nike Store is an e-commerce website designed to showcase and sell Nike's latest shoe collections. Built with React and Tailwind CSS, it provides an intuitive shopping experience with product details, filtering options, and an easy checkout process.`,
     image: "/projects/nike-store.png",
-    tech: ["Modern UI", "react", "e-commerce", "node", "mongoDB"],
+    tech: ["UI UX", "react", "e-commerce", "node", "mongoDB"],
     links: {
       github: "https://github.com/prachanda482244/nike-store",
       external: "https://nike-store-steel.vercel.app/",
     },
-    reverse: false,
+    reverse: true,
+  },
+];
+
+export const otherWorthyProject: CardProps[] = [
+  {
+    title: "Integrate Salesforce with Shopify",
+    description: `Integrated Salesforce and Shopify for seamless data synchronization, automating order management and enhancing customer insights.`,
+    tech: ["salesforce", "shopify", "CMS"],
+    githubLink:
+      "https://github.com/prachanda482244/salesforce-backend-integration",
+    externalLink: "https://www.salesforce.com/ap/?ir=1",
+  },
+  {
+    title: "Credit Card Details Change with Sudsy",
+    description: `Developed a Shopify app that allows customers to securely update credit card details on-site, streamlining payment processing and improving user experience.`,
+    tech: ["shopify", "CMS", "Node"],
+    githubLink: null,
+    externalLink:
+      "https://www.sudsybear.com/?srsltid=AfmBOooVAj8pf_PtEEHSQFF4HjGwt-oHhSGf1Nk1TL32hUX6Fw9HQmGr",
+  },
+  {
+    title: "Defend Chart Implementation",
+    description: `Implemented a custom data visualization solution using Apex and Highcharts to display dynamic charts, while creating custom APIs to securely store and manage data.`,
+    tech: ["shopify", "node", "apex", "charts"],
+    githubLink: "https://github.com/prachanda482244/defend-backend-integration",
+    externalLink: "https://defent.com/pages/reporting",
+  },
+  {
+    title: "Shopify App Frame Fusion",
+    description: `Built a Shopify app that allows merchants to upload videos and assign products directly to those videos, boosting customer engagement and increasing sales.`,
+    tech: ["shopify", "remix", "File System", "API"],
+    githubLink: null,
+    externalLink: "https://frame-fusion-ce1e3d4c2ecb.herokuapp.com/",
+  },
+  {
+    title: "Shopify Cash on Delivery App",
+    description: `Developed a Shopify app that creates draft orders using Shopify APIs, allowing merchants to securely store customer information for cash-on-delivery transactions.`,
+    tech: ["shopify", "remix", "liquid", "graphql"],
+    githubLink: null,
+    externalLink: null,
   },
 ];
