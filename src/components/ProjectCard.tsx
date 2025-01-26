@@ -24,8 +24,7 @@ export const ProjectCard = ({
         reverse ? "md:flex-row-reverse" : ""
       } space-y-6 md:space-y-0 md:space-x-6`}
     >
-      {/* Image */}
-      <div className="w-full md:h-96 h-32  md:w-[60%] overflow-hidden rounded-lg shadow-lg">
+      <div className="w-full md:h-96 h-40 md:w-[60%] overflow-hidden rounded-lg shadow-lg">
         <img
           src={image}
           alt={title}

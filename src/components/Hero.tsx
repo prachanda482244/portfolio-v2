@@ -72,11 +72,18 @@ const Hero = () => {
         </a>{" "}
         with occasional work in design and digital experiences.
       </p>
+
       <button
         ref={addToRefs}
-        className="border border-[#64ffda] text-[#64ffda] px-6 py-3 rounded hover:bg-[#64ffda] hover:text-black transition-all duration-300"
+        className="relative py-3 mt-10 px-8 border border-teal-300 rounded-md text-teal-300 bg-transparent overflow-hidden group"
       >
-        Explore My Work
+        <span
+          className="absolute inset-0 bg-teal-300
+        scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 origin-left rounded-md"
+        ></span>
+        <span className="relative z-10 transition-colors duration-300 group-hover:text-[#0a182d]">
+          <a href="#work">Explore My Work</a>
+        </span>
       </button>
     </section>
   );

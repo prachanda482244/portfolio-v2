@@ -1,4 +1,7 @@
-import { CardProps } from "../types/types";
+import { FaInstagram } from "react-icons/fa";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { SlSocialTwitter } from "react-icons/sl";
+import { CardProps, SocialProps } from "../types/types";
 
 export const navbarItems = [
   {
@@ -31,6 +34,7 @@ export const technologies = [
   { id: 5, name: "Node.js" },
   { id: 6, name: "MongoDB" },
   { id: 7, name: "Docker" },
+  { id: 8, name: "Shopify App" },
 ];
 
 export const experiences = [
@@ -191,5 +195,23 @@ export const otherWorthyProject: CardProps[] = [
     tech: ["shopify", "remix", "liquid", "graphql"],
     githubLink: null,
     externalLink: null,
+  },
+];
+export const socialLinks: SocialProps[] = [
+  {
+    icon: FiGithub,
+    url: "https://github.com/prachanda482244/",
+  },
+  {
+    icon: FaInstagram,
+    url: "https://www.instagram.com/ranaprachanda01/",
+  },
+  {
+    icon: SlSocialTwitter,
+    url: "https://x.com/Itachi482244",
+  },
+  {
+    icon: FiLinkedin,
+    url: "https://www.linkedin.com/in/prachanda-rana/",
   },
 ];

@@ -4,7 +4,7 @@ import { otherWorthyProject } from "../constants/constants";
 
 const NoteWorthyProjects = () => {
   return (
-    <div className="poppins-semibold min-h-screen pt-5">
+    <div className="poppins-semibold min-h-screen  md:mt-20 pt-5">
       <div className="flex flex-col  items-center">
         <p className="text-[25px] text-center text-gray-300 font-semibold capitalize">
           Other Noteworthy Projects

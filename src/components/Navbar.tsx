@@ -1,11 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { navbarItems } from "../constants/constants";
 import { TbMenuDeep } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
   const navbarRef = useRef(null);
+  const [isMobileNav, setIsMobileNav] = useState<boolean>(false);
   const logoRef = useRef(null);
   const menuItemsRef: any = useRef([]);
   menuItemsRef.current = [];
@@ -41,10 +43,36 @@ const Navbar = () => {
       );
   }, []);
 
+  // Mobile menu transition using translateX and visibility
+  useEffect(() => {
+    if (isMobileNav) {
+      gsap.to(".mobile-menu", {
+        x: 0,
+        opacity: 1,
+        duration: 0.1,
+        ease: "power2.out",
+        visibility: "visible",
+      });
+
+      // Disable scrolling when the navbar is open
+      document.body.style.overflow = "hidden";
+    } else {
+      gsap.to(".mobile-menu", {
+        x: "100%",
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.inOut",
+        visibility: "hidden",
+      });
+
+      document.body.style.overflow = "auto";
+    }
+  }, [isMobileNav]);
+
   return (
     <nav
       ref={navbarRef}
-      className="flex items-center justify-between py-5 bg-[#0A192F] text-white"
+      className="flex items-center z-[9999] fixed w-full  md:sticky top-0 overflow-mhidden justify-between px-2 py-2 md:px-0 md:py-5 bg-[#0A192F] text-white"
     >
       {/* Logo */}
       <Link to={"/"}>
@@ -84,10 +112,53 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className="md:hidden flex items-center gap-4">
-        <button className="text-teal-300 border border-teal-300 px-3 py-2 rounded-md hover:bg-teal-300 hover:text-black">
-          <TbMenuDeep />
+      <div className="md:hidden relative flex items-center gap-4">
+        <button
+          onClick={() => setIsMobileNav(true)}
+          className="text-teal-300 px-3 py-2 rounded-md"
+        >
+          <TbMenuDeep className="text-4xl" />
         </button>
+
+        {/* Mobile Navigation */}
+        <div
+          className="mobile-menu absolute transition-all -top-1 py-10 min-h-screen z-[99999] bg-[#112240] w-72 -right-4"
+          style={{ visibility: "hidden", transform: "translateX(100%)" }}
+        >
+          <div className="relative">
+            <button
+              onClick={() => setIsMobileNav(false)}
+              className="absolute -top-4 right-5 text-teal-300"
+            >
+              <RxCross1 className="text-4xl" />
+            </button>
+          </div>
+          <ul className="flex flex-col space-y-12 mt-16 text-sm font-medium">
+            {navbarItems.map((item: any) => (
+              <li
+                onClick={() => setIsMobileNav(false)}
+                key={item.id}
+                ref={addToMenuRefs}
+                className="hover:text-teal-300 flex items-center gap-2 px-10 transition-all"
+              >
+                <span className="text-teal-300">{item.id}.</span>
+                <a
+                  href={item.link}
+                  className="text-gray-400 cursor-pointer hover:text-teal-300 transition-all delay-75"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+
+            <button
+              ref={addToMenuRefs}
+              className="border w-1/2 mx-10 border-teal-300 text-teal-300 py-2 rounded hover:bg-teal-300 hover:text-black transition-all duration-300"
+            >
+              Resume
+            </button>
+          </ul>
+        </div>
       </div>
     </nav>
   );

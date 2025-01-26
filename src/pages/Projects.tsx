@@ -10,8 +10,9 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <Title index="03" title="Some Things I’ve Built" />
         <div className="flex flex-col  md:gap-32 gap-10 pt-4">
-          {projects.map((project) => (
+          {projects.map((project, i) => (
             <ProjectCard
+              key={i}
               title={project.title}
               description={project.description}
               image={project.image}

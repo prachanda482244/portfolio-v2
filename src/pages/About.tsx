@@ -136,10 +136,10 @@ const About = () => {
             <div className="text-sm grid poppins-medium  grid-cols-2 w-full md:w-[80%]">
               {technologies.map((tech: any) => (
                 <p
-                  className="flex tracking-widest text-gray-500 items-center gap-1"
+                  className="flex tracking-widest text-xs leading-loose text-gray-500 items-center gap-1"
                   key={tech.id}
                 >
-                  <FaCaretRight className="text-teal-300 text-sm" />
+                  <FaCaretRight className="text-teal-300 " />
                   {tech.name}
                 </p>
               ))}

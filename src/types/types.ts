@@ -5,3 +5,8 @@ export interface CardProps {
   githubLink?: string | any;
   externalLink?: string | any;
 }
+
+export interface SocialProps {
+  icon: React.ComponentType;
+  url: string;
+}
