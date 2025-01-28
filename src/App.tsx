@@ -13,8 +13,8 @@ import SocialNavigation from "./components/SocialNavigation";
 
 const App = () => {
   return (
-    <div className="bg-[#0a182d] antialiased relative fira-code-light container md:px-10 min-h-screen w-full text-[#64ffda]">
-      <div className="md:w-[85%] mx-auto md:overflow-visible overflow-hidden">
+    <div className="bg-[#0a182d] antialiased relative fira-code-light container md:px-10 min-h-screen w-full text-[#64ffda] ">
+      <div className="md:w-[85%]  mx-auto md:overflow-visible overflow-hidden">
         <Navbar />
         <Routes>
           <Route
