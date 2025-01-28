@@ -61,7 +61,7 @@ const Hero = () => {
         >
           CartMade
         </a>
-        ,focused on developing reliable and accessible Shopify apps, themes,
+        , focused on developing reliable and scalable Shopify apps, themes,
         Shopify Functions using{" "}
         <a
           className="text-purple-500  hover:text-purple-900"
