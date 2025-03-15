@@ -88,6 +88,18 @@ export const experiences = [
 //
 export const projects = [
   {
+    title: "MarketWise Manager",
+    description:
+      " Marketwise Manager enhances your store’s performance with a range of powerful tools. Features like back-in-stock alerts, collection merchandising, free shipping progress bars, and customizable labels help increase engagement and improve the shopping experience. This app is designed to boost sales, increase average order value, and drive business growth, making it an essential tool for any ecommerce store.",
+    image: "/projects/merchandise.png",
+    tech: ["remix", "node", "graphQl", "shopify", "heroku"],
+    links: {
+      github: null,
+      external: "https://merchandise-01b70804f10b.herokuapp.com/",
+    },
+    reverse: true,
+  },
+  {
     title: "Catalog2Cart‑Shoppable PDF",
     description: `Published on the Shopify App Store, this tool adds clickable hotspots to PDFs, turning them into interactive shopping experiences. It simplifies navigation, boosts engagement, and has been shown to increase sales by 20%.`,
     image: "/projects/pdf.webp",
@@ -108,6 +120,30 @@ export const projects = [
       github:
         "https://github.com/prachanda482244/library-management-system-frontend",
       external: "https://library-management-system-frontent.vercel.app/",
+    },
+    reverse: true,
+  },
+  {
+    title: "Dukeshill",
+    description: `Dukeshill is a successful ecommerce site that has generated millions in sales. I developed the platform using Shopify, creating a seamless and user-friendly shopping experience for customers. With features like easy navigation, secure checkout, and responsive design, Dukeshill continues to drive significant revenue and growth.
+`,
+    image: "/projects/dukeshill.png",
+    tech: ["shopify", "liquid", "graphQl", "node"],
+    links: {
+      github: null,
+      external: "https://www.dukeshill.co.uk/",
+    },
+    reverse: false,
+  },
+  {
+    title: "Defent",
+    description: `This ecommerce site features advanced analytics to track sales by medication, state, and age group. Interactive graphs provide insights into top-selling products and regional trends, helping businesses optimize marketing strategies and target specific demographics for increased sales and growth.
+`,
+    image: "/projects/defent.png",
+    tech: ["javascript", "HighChart", "shopify", "liquid"],
+    links: {
+      github: null,
+      external: "https://www.dukeshill.co.uk/",
     },
     reverse: true,
   },
